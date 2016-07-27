@@ -17,8 +17,7 @@ pp.cut_review_to_csv("../data/food_reviews/reviews_4k.csv","../result/reviewsbyp
 #3.对用户历史评论进行分词-去停止词，写入新的csv【用于相似度计算】（30w）已省略
 ###pp.cut_review_to_csv("../data/personal_reviews/all_reviews_sort_30w.csv","../result/reviewsbypreprocessing/all_reviews_30w_cut.csv")
 #4.按用户将历史评论切分
-pp.split_reviews_by_user("../data/personal_reviews/all_reviews_sort_30w.csv","../data/userid/userid_sort.csv")
-
+pp.split_reviews_by_user("../data/personal_reviews/all_reviews_sort_30w_without4510.csv","../data/userid/userid_sort.csv")
 
 #5.相似度计算
 #  相似度矩阵

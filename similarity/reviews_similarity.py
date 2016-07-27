@@ -208,6 +208,7 @@ def get_similarity_by_history_reviews(user_id,querypath,query_words):
             
             for line in rows:
                 words=segmentation_with_stop(line[5],"str")
+                print line[0]
                 print "cut : ",words
                 yield words.split()
     #将网页文档转化为tf-idf
@@ -289,17 +290,17 @@ def similarity_history(reviews_file_path):
             print "no pass:",user_id
             
             print "用户：",user_id,"-------------------------"
-            query_words= row[22]
+            #query_words= row[22]
             query_words=  segmentation_with_stop(row[6],"str")
             print "query_words:",query_words,"-------------------------"
             get_similarity_by_history_reviews(user_id,reviews_file_path,query_words)
         ii=ii+1
    
 #similarity_toMatrix("../result/reviewsbypreprocessing/reviews_4k_cut.csv","../result/reviewsbypreprocessing/reviews_4k_cut.csv","../result/reviews_similarity/similarity_matrix4.csv")
-#similarity_history("../result/reviewsbypreprocessing/reviews_4k_cut.csv")
-query_words=  segmentation_with_stop("喜歡這裡的氣氛，有表演，人氣好","str")
-print query_words
-get_similarity_by_history_reviews("190990209","../result/reviewsbypreprocessing/reviews_4k_cut.csv",query_words)
+similarity_history("../data/food_reviews/reviews_4k.csv")
+#query_words=  segmentation_with_stop("我发誓这是我吃过最好吃的牛扒！又是吃货好友推荐的！太赞啦！还尝了流奶牛角包和芝士牛角包，流奶的奶香浓郁，特别甜，咬一口都会爆浆！外面脆脆的香香的，横切面的层次也很美！口感好好！芝士的味道也很醇厚~重要的是牛角的酥皮超好吃呀！而且还有一点淡淡的咸味，很喜欢啦！下次再来还要尝试不同味道的！","str")
+#print query_words
+#get_similarity_by_history_reviews("14294014","../result/reviewsbypreprocessing/reviews_4k_cut.csv",query_words)
 
 #similarity("../Statistics/data/reviews_all_4990.csv","C:/Users/hadoop/Workspaces/MyEclipse Professional 2014/Sentimental_Polarities/Statistics/data/reviews_all_4990.csv","../Statistics/data/reviews_all_4990.csv.txt")
 #q_file = fp.read_csv_file("C:/Users/hadoop/Workspaces/MyEclipse Professional 2014/Sentimental_Polarities/Statistics/data/reviews_all_4990.csv")#open(querypath, 'r')#读取商品描述的txt 文档

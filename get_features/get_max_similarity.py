@@ -160,7 +160,7 @@ def get_max_similarity_alone(num,userid):
 def save_max_similarity_cvs():
     # Load dataset
     openpath = "../result/reviews_with_features/polarity_person.csv"
-    savepath = "../result/reviews_with_features/reviews_4k_cut_polarity_person_maxsimilarity.csv"
+    savepath = "../result/reviews_with_features/reviews_4k_cut_polarity_person_maxsimilarity2.csv"
     
     review = ul.read_csv_file(openpath)
     ul.write_csv_file_w(savepath, ",".join(review.next())+",当前评论相似度,历史评论相似度")#",第一人称,其他人才,人称之差,正向极性,反向极性,正向平均值,反向平均值,正向方差,反向方差,总体极性（正反差）")

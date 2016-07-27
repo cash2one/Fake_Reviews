@@ -108,4 +108,6 @@ def split_reviews_by_user(filepath,useridfile):
         
 #gen_userid("../data/food_reviews/reviews_4k.csv","../data/user_id.csv")
 #cut_review_to_csv("../data/food_reviews/reviews_4k.csv","../result/reviewsbypreprocessing/reviews_4k_cut.csv")
-split_reviews_by_user("../data/personal_reviews/all_reviews_sort_30w.csv","../data/userid/userid_sort.csv")
+
+
+split_reviews_by_user("../data/personal_reviews/all_reviews_sort_30w_without4510.csv","../data/userid/userid_sort.csv")
